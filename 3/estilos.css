@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: red;
+}
+
+.texto-azul {
+    color: blue;
+}
+
+.texto-amarillo {
+    color: orange;
+}
+
+.texto-rojo {
+    color: purple;
+}
