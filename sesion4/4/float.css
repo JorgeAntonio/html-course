@@ -1,0 +1,264 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos base para elementos */
+.box {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Float examples */
+.float-left {
+  float: left;
+  width: 45%;
+  background-color: #e74c3c;
+}
+
+.float-right {
+  float: right;
+  width: 45%;
+  background-color: #3498db;
+}
+
+/* Contenedor con problema de colapso */
+.contenedor-problema {
+  background-color: #f8f9fa;
+  border: 2px dashed #dc3545;
+  padding: 15px;
+  margin: 20px 0;
+  min-height: 50px;
+}
+
+.contenedor-problema::after {
+  content: "❌ Contenedor colapsado";
+  color: #dc3545;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Clearfix solution */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contenedor-solucionado {
+  background-color: #f8f9fa;
+  border: 2px solid #28a745;
+  padding: 15px;
+  margin: 20px 0;
+  min-height: 50px;
+}
+
+.contenedor-solucionado::after {
+  content: "✅ Contenedor con clearfix";
+  color: #28a745;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Inline-block examples */
+.inline-block {
+  display: inline-block;
+  width: 45%;
+  background-color: #9b59b6;
+  vertical-align: top;
+}
+
+.inline-block-alt {
+  display: inline-block;
+  width: 45%;
+  background-color: #f39c12;
+  vertical-align: top;
+}
+
+/* Comparación float vs inline-block */
+.comparacion {
+  margin: 30px 0;
+}
+
+.comparacion .seccion {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.comparacion h3 {
+  color: #333;
+  margin-top: 0;
+}
+
+/* Float layout example */
+.float-layout {
+  background-color: #ecf0f1;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.float-layout .header {
+  background-color: #34495e;
+  color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.float-layout .sidebar {
+  float: left;
+  width: 25%;
+  background-color: #e67e22;
+  color: white;
+  padding: 15px;
+  min-height: 200px;
+  border-radius: 5px;
+}
+
+.float-layout .content {
+  float: right;
+  width: 70%;
+  background-color: #2ecc71;
+  color: white;
+  padding: 15px;
+  min-height: 200px;
+  border-radius: 5px;
+}
+
+/* Inline-block layout example */
+.inline-block-layout {
+  background-color: #ecf0f1;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.inline-block-layout .header {
+  background-color: #34495e;
+  color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.inline-block-layout .sidebar {
+  display: inline-block;
+  width: 25%;
+  background-color: #e67e22;
+  color: white;
+  padding: 15px;
+  min-height: 200px;
+  border-radius: 5px;
+  vertical-align: top;
+}
+
+.inline-block-layout .content {
+  display: inline-block;
+  width: 70%;
+  background-color: #2ecc71;
+  color: white;
+  padding: 15px;
+  min-height: 200px;
+  border-radius: 5px;
+  vertical-align: top;
+}
+
+/* Información explicativa */
+.info-section {
+  background-color: #e8f4fd;
+  border: 1px solid #2196f3;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.info-section h3 {
+  color: #1976d2;
+  margin-top: 0;
+}
+
+.info-section ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.info-section li {
+  margin: 5px 0;
+}
+
+/* Ejemplos de código */
+.code-example {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+}
+
+.code-example h4 {
+  color: #495057;
+  margin-top: 0;
+}
+
+/* Problemas comunes */
+.problemas {
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.problemas h3 {
+  color: #856404;
+  margin-top: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .float-left,
+  .float-right,
+  .inline-block,
+  .inline-block-alt {
+    width: 100%;
+    float: none;
+    margin: 10px 0;
+  }
+
+  .float-layout .sidebar,
+  .float-layout .content,
+  .inline-block-layout .sidebar,
+  .inline-block-layout .content {
+    width: 100%;
+    float: none;
+    margin: 10px 0;
+  }
+}

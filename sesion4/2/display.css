@@ -1,0 +1,121 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+/* Estilos para mostrar las diferencias visuales */
+.block {
+  display: block;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 15px;
+  margin: 10px 0;
+  border: 2px solid #d63031;
+  width: 300px;
+  height: 80px;
+}
+
+.inline {
+  display: inline;
+  background-color: #74b9ff;
+  color: black;
+  padding: 15px;
+  margin: 10px 5px;
+  border: 2px solid #0984e3;
+  /* width y height NO funcionan en inline */
+  width: 300px; /* ❌ No se aplica */
+  height: 80px; /* ❌ No se aplica */
+}
+
+.inline-block {
+  display: inline-block;
+  background-color: #55a3ff;
+  color: white;
+  padding: 15px;
+  margin: 10px 5px;
+  border: 2px solid #2d3436;
+  width: 200px;
+  height: 60px;
+  vertical-align: top;
+}
+
+.none {
+  display: none;
+  background-color: #a29bfe;
+  color: white;
+  padding: 15px;
+  margin: 10px 0;
+  border: 2px solid #6c5ce7;
+}
+
+/* Estilos para el texto dentro de los elementos */
+.block p,
+.inline p,
+.inline-block p,
+.none p {
+  margin: 0;
+  text-align: center;
+}
+
+/* Información explicativa */
+.info-section {
+  background-color: #e8f4fd;
+  border: 1px solid #2196f3;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.info-section h3 {
+  color: #1976d2;
+  margin-top: 0;
+}
+
+.info-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+.info-section th,
+.info-section td {
+  border: 1px solid #2196f3;
+  padding: 8px;
+  text-align: left;
+}
+
+.info-section th {
+  background-color: #bbdefb;
+  font-weight: bold;
+}
+
+/* Ejemplos prácticos adicionales */
+.ejemplo-practico {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.ejemplo-practico h4 {
+  color: #495057;
+  margin-top: 0;
+}
+
+.ejemplo-bloque {
+  background-color: lightblue;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #007bff;
+}
+
+.ejemplo-inline {
+  background-color: lightcoral;
+  padding: 10px;
+  margin: 5px 5px;
+  border: 1px solid #dc3545;
+}

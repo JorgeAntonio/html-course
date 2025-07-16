@@ -1,0 +1,30 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.caja {
+  /* CONTENT (Contenido) */
+  width: 200px;
+  height: 100px;
+
+  /* PADDING (Relleno interno) */
+  padding: 20px;
+
+  /* BORDER (Borde) */
+  border: 2px solid black;
+
+  /* MARGIN (Margen externo) */
+  margin: 30px;
+
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Estilos para el texto dentro de la caja */
+.caja p {
+  margin: 0;
+  text-align: center;
+  line-height: 60px; /* Para centrar verticalmente el texto */
+}

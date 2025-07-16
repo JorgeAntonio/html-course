@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancho (width) y Alto (height) - CSS</title>
+    <link rel="stylesheet" href="ancho.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>📏 Ancho (width) y Alto (height)</h1>
+
+        <div class="info-section">
+            <h3>📌 Conceptos clave:</h3>
+            <ul>
+                <li><strong>width y height</strong> definen dimensiones, pero no aplican a elementos inline</li>
+                <li>Se pueden usar unidades como <strong>px, %, em, rem</strong></li>
+                <li><strong>max-width y min-height</strong> son útiles para diseños responsivos</li>
+            </ul>
+        </div>
+
+        <h2>🎯 Ejercicio rápido:</h2>
+        <div class="box">
+            width: 50% | height: 100px
+        </div>
+
+        <div class="ejemplo">
+            <h4>💻 Código CSS:</h4>
+            <pre><code>.box {
+  width: 50%; /* Mitad del contenedor padre */
+  height: 100px;
+  background: lightgreen;
+}</code></pre>
+        </div>
+
+        <h2>📐 Diferentes unidades de medida:</h2>
+        <div class="unidades">
+            <div class="unidad px">
+                width: 200px | height: 80px
+            </div>
+            <div class="unidad porcentaje">
+                width: 75% | height: 80px
+            </div>
+            <div class="unidad em">
+                width: 15em | height: 4em
+            </div>
+            <div class="unidad rem">
+                width: 12rem | height: 3rem
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>📋 Explicación de unidades:</h3>
+            <ul>
+                <li><strong>px (píxeles):</strong> Unidad fija, no cambia con el tamaño de pantalla</li>
+                <li><strong>% (porcentaje):</strong> Relativo al contenedor padre</li>
+                <li><strong>em:</strong> Relativo al tamaño de fuente del elemento</li>
+                <li><strong>rem:</strong> Relativo al tamaño de fuente del elemento raíz (html)</li>
+            </ul>
+        </div>
+
+        <h2>📱 Diseño responsivo con max-width y min-height:</h2>
+        <div class="responsive">
+            <div class="max-width">
+                <strong>max-width: 400px</strong><br>
+                Este elemento nunca será más ancho que 400px, pero puede ser más estrecho en pantallas pequeñas.
+            </div>
+
+            <div class="min-height">
+                <strong>min-height: 120px</strong><br>
+                Este elemento nunca será más bajo que 120px, pero puede crecer si el contenido es más largo.
+            </div>
+        </div>
+
+        <h2>⚠️ Elementos inline vs block:</h2>
+        <div class="inline-demo">
+            <h3>Elementos inline (width y height NO funcionan):</h3>
+            <span class="inline-element">Span inline</span>
+            <span class="inline-element">Otro span</span>
+            <span class="inline-element">Tercer span</span>
+
+            <h3>Elementos block (width y height SÍ funcionan):</h3>
+            <div class="block-element">Div block</div>
+            <div class="block-element">Otro div</div>
+        </div>
+
+        <div class="info-section">
+            <h3>💡 Puntos importantes:</h3>
+            <ul>
+                <li><strong>Elementos inline:</strong> width y height se ignoran, solo ocupan el espacio del contenido
+                </li>
+                <li><strong>Elementos block:</strong> width y height se aplican correctamente</li>
+                <li><strong>max-width:</strong> Útil para evitar que elementos sean demasiado anchos en pantallas
+                    grandes</li>
+                <li><strong>min-height:</strong> Útil para asegurar una altura mínima, especialmente en contenido
+                    dinámico</li>
+            </ul>
+        </div>
+
+        <h2>🎨 Ejemplos prácticos:</h2>
+        <div class="ejemplos">
+            <div class="ejemplo">
+                <h4>📱 Botón responsivo:</h4>
+                <button
+                    style="width: 100%; max-width: 300px; height: 50px; background: #3498db; color: white; border: none; border-radius: 5px; font-size: 16px;">
+                    Botón que se adapta
+                </button>
+                <p><em>Este botón ocupa todo el ancho disponible hasta 300px máximo</em></p>
+            </div>
+
+            <div class="ejemplo">
+                <h4>🖼️ Imagen responsiva:</h4>
+                <div
+                    style="width: 100%; max-width: 400px; min-height: 200px; background: linear-gradient(45deg, #ff6b6b, #4ecdc4); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                    Imagen simulada
+                </div>
+                <p><em>Esta "imagen" se adapta al ancho del contenedor pero nunca supera 400px</em></p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>🚀 Consejos para diseño responsivo:</h3>
+            <ul>
+                <li>Usa <strong>max-width</strong> en lugar de <strong>width</strong> fijo para elementos que deben ser
+                    responsivos</li>
+                <li>Combina <strong>width: 100%</strong> con <strong>max-width</strong> para elementos que se adapten
+                    pero no sean demasiado anchos</li>
+                <li>Usa <strong>min-height</strong> para asegurar que elementos tengan suficiente espacio para su
+                    contenido</li>
+                <li>Considera usar <strong>em</strong> o <strong>rem</strong> para tamaños que deben escalar con el
+                    texto</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

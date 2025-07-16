@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float, Inline-Block y Clearfix - CSS</title>
+    <link rel="stylesheet" href="float.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🌊 Float, Inline-Block y Clearfix</h1>
+
+        <div class="info-section">
+            <h3>📌 Conceptos principales:</h3>
+            <ul>
+                <li><strong>Float:</strong> Permite que un elemento flote a la izquierda o derecha</li>
+                <li><strong>Problema común:</strong> El contenedor padre colapsa si todos sus hijos son float</li>
+                <li><strong>Clearfix:</strong> Solución para evitar el colapso del contenedor</li>
+                <li><strong>Inline-Block:</strong> Combina características de block e inline</li>
+            </ul>
+        </div>
+
+        <h2>🌊 Float - Conceptos básicos:</h2>
+        <div class="code-example">
+            <h4>💻 Código CSS:</h4>
+            <pre><code>.float-left { float: left; width: 50%; }
+.float-right { float: right; width: 50%; }</code></pre>
+        </div>
+
+        <div class="box float-left">
+            Float Left
+        </div>
+        <div class="box float-right">
+            Float Right
+        </div>
+
+        <h2>⚠️ Problema del colapso del contenedor:</h2>
+        <div class="contenedor-problema">
+            <div class="box float-left">
+                Elemento flotante
+            </div>
+            <div class="box float-right">
+                Otro elemento flotante
+            </div>
+        </div>
+
+        <div class="problemas">
+            <h3>🚨 ¿Qué está pasando?</h3>
+            <p>Cuando todos los elementos hijos tienen <code>float</code>, el contenedor padre "colapsa" y no mantiene
+                su altura. Esto puede causar problemas de diseño y layout.</p>
+        </div>
+
+        <h2>✅ Solución con Clearfix:</h2>
+        <div class="code-example">
+            <h4>💻 Código CSS del Clearfix:</h4>
+            <pre><code>.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}</code></pre>
+        </div>
+
+        <div class="contenedor-solucionado clearfix">
+            <div class="box float-left">
+                Elemento flotante
+            </div>
+            <div class="box float-right">
+                Otro elemento flotante
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>🔧 ¿Cómo funciona el Clearfix?</h3>
+            <ul>
+                <li><strong>::after:</strong> Crea un pseudo-elemento al final del contenedor</li>
+                <li><strong>content: "":</strong> El pseudo-elemento está vacío</li>
+                <li><strong>display: table:</strong> Hace que el pseudo-elemento sea un elemento de bloque</li>
+                <li><strong>clear: both:</strong> Limpia los floats anteriores, forzando al contenedor a expandirse</li>
+            </ul>
+        </div>
+
+        <h2>📦 Inline-Block:</h2>
+        <div class="code-example">
+            <h4>💻 Código CSS:</h4>
+            <pre><code>.inline-block { 
+  display: inline-block; 
+  width: 50%; 
+  vertical-align: top;
+}</code></pre>
+        </div>
+
+        <div class="box inline-block">
+            Inline-Block 1
+        </div>
+        <div class="box inline-block-alt">
+            Inline-Block 2
+        </div>
+
+        <div class="info-section">
+            <h3>🎯 Características de Inline-Block:</h3>
+            <ul>
+                <li>Combina características de <strong>block</strong> e <strong>inline</strong></li>
+                <li>Permite definir <strong>width</strong> y <strong>height</strong></li>
+                <li>Se alinea como texto (horizontalmente)</li>
+                <li>No requiere clearfix</li>
+                <li>Puede tener espacios en blanco entre elementos</li>
+            </ul>
+        </div>
+
+        <h2>🔄 Comparación: Float vs Inline-Block</h2>
+        <div class="comparacion">
+            <div class="seccion">
+                <h3>🌊 Layout con Float:</h3>
+                <div class="float-layout">
+                    <div class="header">Header</div>
+                    <div class="sidebar">Sidebar (float: left)</div>
+                    <div class="content">Content (float: right)</div>
+                </div>
+                <p><em>Requiere clearfix para evitar colapso del contenedor</em></p>
+            </div>
+
+            <div class="seccion">
+                <h3>📦 Layout con Inline-Block:</h3>
+                <div class="inline-block-layout">
+                    <div class="header">Header</div>
+                    <div class="sidebar">Sidebar (inline-block)</div>
+                    <div class="content">Content (inline-block)</div>
+                </div>
+                <p><em>No requiere clearfix, más fácil de manejar</em></p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>📊 Tabla comparativa:</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
+                <thead>
+                    <tr style="background-color: #bbdefb;">
+                        <th style="border: 1px solid #2196F3; padding: 8px;">Característica</th>
+                        <th style="border: 1px solid #2196F3; padding: 8px;">Float</th>
+                        <th style="border: 1px solid #2196F3; padding: 8px;">Inline-Block</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #2196F3; padding: 8px;"><strong>Colapso del contenedor</strong>
+                        </td>
+                        <td style="border: 1px solid #2196F3; padding: 8px;">❌ Sí (requiere clearfix)</td>
+                        <td style="border: 1px solid #2196F3; padding: 8px;">✅ No</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #2196F3; padding: 8px;"><strong>Espacios en blanco</strong></td>
+                        <td style="border: 1px solid #2196F3; padding: 8px;">✅ No</td>
+                        <td style="border: 1px solid #2196F3; padding: 8px;">❌ Sí (puede ser problema)</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #2196F3; padding: 8px;"><strong>Centrado vertical</strong></td>
+                        <td style="border: 1px solid #2196F3; padding: 8px;">❌ Difícil</td>
+                        <td style="border: 1px solid #2196F3; padding: 8px;">✅ Fácil con vertical-align</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #2196F3; padding: 8px;"><strong>Compatibilidad</strong></td>
+                        <td style="border: 1px solid #2196F3; padding: 8px;">✅ Excelente</td>
+                        <td style="border: 1px solid #2196F3; padding: 8px;">✅ Excelente</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>💡 Cuándo usar cada uno:</h2>
+        <div class="info-section">
+            <h3>🌊 Usar Float cuando:</h3>
+            <ul>
+                <li>Necesitas que un elemento flote alrededor de otro</li>
+                <li>Quieres crear layouts complejos con elementos superpuestos</li>
+                <li>Trabajas con contenido que debe "envolver" alrededor de imágenes</li>
+            </ul>
+
+            <h3>📦 Usar Inline-Block cuando:</h3>
+            <ul>
+                <li>Quieres crear layouts de columnas simples</li>
+                <li>Necesitas elementos que se alineen horizontalmente</li>
+                <li>Prefieres una solución más simple sin clearfix</li>
+                <li>Trabajas con navegaciones horizontales</li>
+            </ul>
+        </div>
+
+        <h2>🚀 Alternativas modernas:</h2>
+        <div class="code-example">
+            <h4>💻 Flexbox (Recomendado para layouts modernos):</h4>
+            <pre><code>.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  flex: 1;
+}</code></pre>
+        </div>
+
+        <div class="info-section">
+            <h3>🎯 Flexbox vs Grid:</h3>
+            <ul>
+                <li><strong>Flexbox:</strong> Ideal para layouts unidimensionales (fila o columna)</li>
+                <li><strong>Grid:</strong> Ideal para layouts bidimensionales (filas y columnas)</li>
+                <li><strong>Float:</strong> Útil para casos específicos como texto alrededor de imágenes</li>
+                <li><strong>Inline-Block:</strong> Bueno para layouts simples de navegación</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

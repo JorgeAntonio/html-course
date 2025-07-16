@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="perfil">
+        <section class="foto">
+            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=1"
+                alt="Foto de perfil de Jorge Del Águila" />
+            <h1>Jorge Del Águila</h1>
+        </section>
+
+        <hr />
+
+        <section>
+            <h2>Intereses:</h2>
+            <ul>
+                <li>Programar</li>
+                <li>Viajar</li>
+                <li>Leer ciencia ficción</li>
+            </ul>
+        </section>
+
+        <hr />
+
+        <section>
+            <h2>Habilidades</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lenguaje</th>
+                        <th>Nivel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Intermedio</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Básico</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr />
+
+        <section>
+            <h2>Contáctame:</h2>
+            <form>
+                <div>
+                    <label for="nombre">Nombre:</label><br />
+                    <input type="text" id="nombre" name="nombre" />
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje:</label><br />
+                    <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>

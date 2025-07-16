@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display: Block vs Inline - CSS</title>
+    <link rel="stylesheet" href="display.css">
+</head>
+
+<body>
+    <h1>🎯 Display: Block vs Inline</h1>
+
+    <div class="info-section">
+        <h3>📌 Diferencias clave:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Block (display: block)</th>
+                    <th>Inline (display: inline)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Ancho</strong></td>
+                    <td>Ocupa todo el ancho disponible</td>
+                    <td>Solo ocupa el espacio necesario</td>
+                </tr>
+                <tr>
+                    <td><strong>Dimensiones</strong></td>
+                    <td>Permite definir width y height</td>
+                    <td>No respeta width ni height</td>
+                </tr>
+                <tr>
+                    <td><strong>Salto de línea</strong></td>
+                    <td>Se coloca en una nueva línea</td>
+                    <td>Se coloca en la misma línea</td>
+                </tr>
+                <tr>
+                    <td><strong>Ejemplos HTML</strong></td>
+                    <td>&lt;div&gt;, &lt;p&gt;, &lt;h1&gt;, &lt;section&gt;</td>
+                    <td>&lt;span&gt;, &lt;a&gt;, &lt;strong&gt;, &lt;em&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>🔍 Demostración visual:</h2>
+
+    <h3>1. Display: Block</h3>
+    <div class="block">
+        <p>Hola, soy un párrafo BLOCK</p>
+    </div>
+    <div class="block">
+        <p>Otro elemento BLOCK</p>
+    </div>
+
+    <h3>2. Display: Inline</h3>
+    <div class="inline">
+        <p>Hola, soy INLINE</p>
+    </div>
+    <div class="inline">
+        <p>Otro elemento INLINE</p>
+    </div>
+    <div class="inline">
+        <p>Tercer elemento INLINE</p>
+    </div>
+
+    <h3>3. Display: Inline-Block</h3>
+    <div class="inline-block">
+        <p>INLINE-BLOCK</p>
+    </div>
+    <div class="inline-block">
+        <p>Otro INLINE-BLOCK</p>
+    </div>
+
+    <h3>4. Display: None</h3>
+    <div class="none">
+        <p>Este elemento está oculto (display: none)</p>
+    </div>
+    <p>← El elemento anterior no se muestra</p>
+
+    <div class="ejemplo-practico">
+        <h4>📝 Ejemplo práctico adicional:</h4>
+        <div class="ejemplo-bloque">Soy un bloque (div)</div>
+        <span class="ejemplo-inline">Soy inline (span)</span>
+        <span class="ejemplo-inline">Otro span inline</span>
+        <div class="ejemplo-bloque">Otro bloque (div)</div>
+    </div>
+
+    <div class="info-section">
+        <h3>💡 Puntos importantes:</h3>
+        <ul>
+            <li><strong>Block:</strong> Los elementos se apilan verticalmente, uno debajo del otro</li>
+            <li><strong>Inline:</strong> Los elementos se colocan horizontalmente en la misma línea</li>
+            <li><strong>Inline-Block:</strong> Combina características de ambos: se colocan horizontalmente pero
+                respetan width y height</li>
+            <li><strong>None:</strong> El elemento se oculta completamente y no ocupa espacio</li>
+        </ul>
+    </div>
+
+    <div class="info-section">
+        <h3>🎨 Propiedades que funcionan en cada tipo:</h3>
+        <ul>
+            <li><strong>Block:</strong> width, height, margin, padding, border ✅</li>
+            <li><strong>Inline:</strong> margin (solo horizontal), padding, border ✅</li>
+            <li><strong>Inline-Block:</strong> width, height, margin, padding, border ✅</li>
+            <li><strong>None:</strong> Ninguna propiedad visual se aplica ❌</li>
+        </ul>
+    </div>
+</body>
+
+</html>

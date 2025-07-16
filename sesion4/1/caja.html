@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caja - CSS Box Model</title>
+    <link rel="stylesheet" href="caja.css">
+</head>
+
+<body>
+    <h1>📦 Modelo de Caja CSS (Box Model)</h1>
+
+    <div class="info-box">
+        <h3>📌 Explicación teórica:</h3>
+        <p>El modelo de caja define cómo se estructuran los elementos en una página web.</p>
+        <h4>Componentes principales:</h4>
+        <ul>
+            <li><strong>Content (contenido):</strong> El área donde se muestra el texto o imágenes.</li>
+            <li><strong>Padding (relleno):</strong> Espacio interno entre el contenido y el borde.</li>
+            <li><strong>Border (borde):</strong> Línea que rodea el padding y el contenido.</li>
+            <li><strong>Margin (margen):</strong> Espacio externo que separa el elemento de otros.</li>
+        </ul>
+    </div>
+
+    <h2>📌 Demostración visual:</h2>
+    <div class="caja">
+        <p>Hola, soy un párrafo</p>
+    </div>
+
+    <img src="https://desarrolladoresweb.org/wp-content/uploads/Representaci%C3%B3n-de-modelo-de-cajas-CSS.png"
+        alt="caja">
+
+    <div class="info-box">
+        <h3>🧮 Cálculo del tamaño total:</h3>
+        <p><strong>Ancho total = width + padding-left + padding-right + border-left + border-right</strong></p>
+        <p>200px + 20px + 20px + 2px + 2px = <strong>244px</strong></p>
+
+        <p><strong>Alto total = height + padding-top + padding-bottom + border-top + border-bottom</strong></p>
+        <p>100px + 20px + 20px + 2px + 2px = <strong>144px</strong></p>
+
+        <p><em>Nota: El margin (30px) no se incluye en el tamaño total del elemento, pero sí afecta el espacio que ocupa
+                en la página.</em></p>
+    </div>
+
+    <div class="info-box">
+        <h3>💡 Propiedades CSS utilizadas:</h3>
+        <ul>
+            <li><code>width: 200px</code> - Ancho del contenido</li>
+            <li><code>height: 100px</code> - Alto del contenido</li>
+            <li><code>padding: 20px</code> - Relleno interno (20px en todos los lados)</li>
+            <li><code>border: 2px solid black</code> - Borde de 2px sólido negro</li>
+            <li><code>margin: 30px</code> - Margen externo (30px en todos los lados)</li>
+        </ul>
+    </div>
+</body>
+
+</html>
