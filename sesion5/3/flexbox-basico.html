@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3: Flexbox Básico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>🎪 Ejercicio 3: Flexbox Básico</h1>
+        <p>Primeros pasos con CSS Flexible Box Layout</p>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Introducción a Flexbox -->
+            <section class="intro">
+                <h2>🎯 ¿Qué es Flexbox?</h2>
+                <p>Flexbox es un modelo de diseño unidimensional que permite distribuir elementos de manera flexible
+                    dentro de un contenedor. Es perfecto para crear layouts que se adaptan a diferentes tamaños de
+                    pantalla.</p>
+
+                <div class="flex-concepts">
+                    <div class="concept">
+                        <h3>📦 Contenedor Flex</h3>
+                        <p>El elemento padre que contiene los elementos flex</p>
+                        <code>display: flex;</code>
+                    </div>
+                    <div class="concept">
+                        <h3>🎯 Elementos Flex</h3>
+                        <p>Los hijos directos del contenedor flex</p>
+                        <code>flex-items</code>
+                    </div>
+                    <div class="concept">
+                        <h3>📐 Eje Principal</h3>
+                        <p>La dirección en la que se distribuyen los elementos</p>
+                        <code>flex-direction</code>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ejercicio 1: Display Flex -->
+            <section class="exercise">
+                <h2>1. Display: Flex</h2>
+                <p>Convierte un contenedor en un contenedor flex. Los elementos hijos se distribuyen automáticamente.
+                </p>
+
+                <div class="demo-area">
+                    <h3>Sin Flexbox:</h3>
+                    <div class="container-no-flex">
+                        <div class="flex-item">Elemento 1</div>
+                        <div class="flex-item">Elemento 2</div>
+                        <div class="flex-item">Elemento 3</div>
+                    </div>
+
+                    <h3>Con Flexbox:</h3>
+                    <div class="container-flex">
+                        <div class="flex-item">Elemento 1</div>
+                        <div class="flex-item">Elemento 2</div>
+                        <div class="flex-item">Elemento 3</div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.container-flex {
+    display: flex;
+    border: 2px dashed #667eea;
+    padding: 1rem;
+    background: #f8f9fa;
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio 2: Flex Direction -->
+            <section class="exercise">
+                <h2>2. Flex Direction</h2>
+                <p>Controla la dirección del eje principal (horizontal o vertical).</p>
+
+                <div class="demo-area">
+                    <h3>Row (por defecto - horizontal):</h3>
+                    <div class="flex-container row">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+
+                    <h3>Column (vertical):</h3>
+                    <div class="flex-container column">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+
+                    <h3>Row Reverse (horizontal invertido):</h3>
+                    <div class="flex-container row-reverse">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+
+                    <h3>Column Reverse (vertical invertido):</h3>
+                    <div class="flex-container column-reverse">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.flex-container {
+    display: flex;
+    border: 2px dashed #667eea;
+    padding: 1rem;
+    background: #f8f9fa;
+    margin: 1rem 0;
+}
+
+.row {
+    flex-direction: row; /* por defecto */
+}
+
+.column {
+    flex-direction: column;
+    min-height: 200px;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+    min-height: 200px;
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio 3: Justify Content -->
+            <section class="exercise">
+                <h2>3. Justify Content</h2>
+                <p>Alinea elementos en el eje principal (horizontal por defecto).</p>
+
+                <div class="demo-area">
+                    <h3>Flex Start (por defecto):</h3>
+                    <div class="flex-container justify-start">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+
+                    <h3>Center:</h3>
+                    <div class="flex-container justify-center">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+
+                    <h3>Flex End:</h3>
+                    <div class="flex-container justify-end">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+
+                    <h3>Space Between:</h3>
+                    <div class="flex-container justify-between">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+
+                    <h3>Space Around:</h3>
+                    <div class="flex-container justify-around">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+
+                    <h3>Space Evenly:</h3>
+                    <div class="flex-container justify-evenly">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.justify-start {
+    justify-content: flex-start; /* por defecto */
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio 4: Align Items -->
+            <section class="exercise">
+                <h2>4. Align Items</h2>
+                <p>Alinea elementos en el eje transversal (vertical por defecto).</p>
+
+                <div class="demo-area">
+                    <h3>Stretch (por defecto):</h3>
+                    <div class="flex-container align-stretch">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item tall">2 (Alto)</div>
+                        <div class="flex-item">3</div>
+                    </div>
+
+                    <h3>Flex Start:</h3>
+                    <div class="flex-container align-start">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item tall">2 (Alto)</div>
+                        <div class="flex-item">3</div>
+                    </div>
+
+                    <h3>Center:</h3>
+                    <div class="flex-container align-center">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item tall">2 (Alto)</div>
+                        <div class="flex-item">3</div>
+                    </div>
+
+                    <h3>Flex End:</h3>
+                    <div class="flex-container align-end">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item tall">2 (Alto)</div>
+                        <div class="flex-item">3</div>
+                    </div>
+
+                    <h3>Baseline:</h3>
+                    <div class="flex-container align-baseline">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item tall">2 (Alto)</div>
+                        <div class="flex-item">3</div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.align-stretch {
+    align-items: stretch; /* por defecto */
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-baseline {
+    align-items: baseline;
+}
+
+.flex-item.tall {
+    min-height: 100px;
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio 5: Centrado Perfecto -->
+            <section class="exercise">
+                <h2>5. Centrado Perfecto con Flexbox</h2>
+                <p>La forma más fácil de centrar elementos tanto horizontal como verticalmente.</p>
+
+                <div class="demo-area">
+                    <div class="perfect-center">
+                        <div class="centered-content">
+                            <h3>Centrado Perfecto</h3>
+                            <p>Este elemento está perfectamente centrado usando flexbox</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.perfect-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 10px;
+}
+
+.centered-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio 6: Flex Wrap -->
+            <section class="exercise">
+                <h2>6. Flex Wrap</h2>
+                <p>Controla si los elementos se envuelven a la siguiente línea cuando no hay espacio suficiente.</p>
+
+                <div class="demo-area">
+                    <h3>No Wrap (por defecto):</h3>
+                    <div class="flex-container no-wrap">
+                        <div class="flex-item wide">Elemento 1</div>
+                        <div class="flex-item wide">Elemento 2</div>
+                        <div class="flex-item wide">Elemento 3</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                    </div>
+
+                    <h3>Wrap:</h3>
+                    <div class="flex-container wrap">
+                        <div class="flex-item wide">Elemento 1</div>
+                        <div class="flex-item wide">Elemento 2</div>
+                        <div class="flex-item wide">Elemento 3</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                    </div>
+
+                    <h3>Wrap Reverse:</h3>
+                    <div class="flex-container wrap-reverse">
+                        <div class="flex-item wide">Elemento 1</div>
+                        <div class="flex-item wide">Elemento 2</div>
+                        <div class="flex-item wide">Elemento 3</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                        <div class="flex-item wide">Elemento 4</div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.no-wrap {
+    flex-wrap: nowrap; /* por defecto */
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.flex-item.wide {
+    min-width: 200px;
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio Práctico -->
+            <section class="exercise">
+                <h2>🎯 Ejercicio Práctico</h2>
+                <p>Crea una barra de navegación responsive usando flexbox con los siguientes elementos:</p>
+                <ul>
+                    <li>Logo a la izquierda</li>
+                    <li>Enlaces de navegación centrados</li>
+                    <li>Botón de acción a la derecha</li>
+                    <li>En móviles, los elementos se apilan verticalmente</li>
+                </ul>
+
+                <div class="navbar-demo">
+                    <div class="navbar">
+                        <div class="logo">Logo</div>
+                        <nav class="nav-links">
+                            <a href="#" class="nav-link">Inicio</a>
+                            <a href="#" class="nav-link">Servicios</a>
+                            <a href="#" class="nav-link">Productos</a>
+                            <a href="#" class="nav-link">Contacto</a>
+                        </nav>
+                        <button class="action-btn">Acción</button>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.action-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background: white;
+    color: #667eea;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}</code></pre>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Curso de HTML & CSS Básico - Ejercicio 3</p>
+        <a href="../index.html" class="btn-back">← Volver al índice</a>
+    </footer>
+</body>
+
+</html>

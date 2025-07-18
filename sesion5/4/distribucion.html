@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4: Distribución con Flexbox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>📊 Ejercicio 4: Distribución con Flexbox</h1>
+        <p>Practica justify-content y align-items con diferentes valores</p>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Introducción -->
+            <section class="intro">
+                <h2>🎯 Distribución de Elementos</h2>
+                <p>En este ejercicio aprenderás a controlar cómo se distribuyen los elementos dentro de un contenedor
+                    flex usando las propiedades <code>justify-content</code> y <code>align-items</code>.</p>
+            </section>
+
+            <!-- Ejercicio 1: Justify Content Avanzado -->
+            <section class="exercise">
+                <h2>1. Justify Content - Distribución Horizontal</h2>
+                <p>Controla la distribución de elementos en el eje principal (horizontal por defecto).</p>
+
+                <div class="demo-area">
+                    <h3>Space Between - Espacio entre elementos:</h3>
+                    <div class="flex-container justify-between">
+                        <div class="flex-item">Inicio</div>
+                        <div class="flex-item">Centro</div>
+                        <div class="flex-item">Final</div>
+                    </div>
+
+                    <h3>Space Around - Espacio alrededor:</h3>
+                    <div class="flex-container justify-around">
+                        <div class="flex-item">Elemento 1</div>
+                        <div class="flex-item">Elemento 2</div>
+                        <div class="flex-item">Elemento 3</div>
+                    </div>
+
+                    <h3>Space Evenly - Espacio uniforme:</h3>
+                    <div class="flex-container justify-evenly">
+                        <div class="flex-item">Uno</div>
+                        <div class="flex-item">Dos</div>
+                        <div class="flex-item">Tres</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ejercicio 2: Align Items Avanzado -->
+            <section class="exercise">
+                <h2>2. Align Items - Alineación Vertical</h2>
+                <p>Controla la alineación de elementos en el eje transversal (vertical por defecto).</p>
+
+                <div class="demo-area">
+                    <h3>Stretch - Estirar (por defecto):</h3>
+                    <div class="flex-container align-stretch">
+                        <div class="flex-item">Corto</div>
+                        <div class="flex-item tall">Alto</div>
+                        <div class="flex-item">Corto</div>
+                    </div>
+
+                    <h3>Center - Centrar:</h3>
+                    <div class="flex-container align-center">
+                        <div class="flex-item">Corto</div>
+                        <div class="flex-item tall">Alto</div>
+                        <div class="flex-item">Corto</div>
+                    </div>
+
+                    <h3>Baseline - Línea base:</h3>
+                    <div class="flex-container align-baseline">
+                        <div class="flex-item">Texto</div>
+                        <div class="flex-item tall">Texto Alto</div>
+                        <div class="flex-item">Texto</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ejercicio 3: Combinaciones -->
+            <section class="exercise">
+                <h2>3. Combinaciones de Distribución</h2>
+                <p>Combina diferentes valores de justify-content y align-items.</p>
+
+                <div class="demo-area">
+                    <h3>Centrado perfecto:</h3>
+                    <div class="flex-container perfect-center">
+                        <div class="flex-item">Centrado</div>
+                    </div>
+
+                    <h3>Distribuido horizontalmente, centrado verticalmente:</h3>
+                    <div class="flex-container justify-between align-center">
+                        <div class="flex-item">Izquierda</div>
+                        <div class="flex-item tall">Centro</div>
+                        <div class="flex-item">Derecha</div>
+                    </div>
+
+                    <h3>Espaciado uniforme, alineado al inicio:</h3>
+                    <div class="flex-container justify-evenly align-start">
+                        <div class="flex-item">Uno</div>
+                        <div class="flex-item tall">Dos</div>
+                        <div class="flex-item">Tres</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ejercicio 4: Layout de Cards -->
+            <section class="exercise">
+                <h2>4. Layout de Cards con Flexbox</h2>
+                <p>Crea un layout de cards que se adapte automáticamente.</p>
+
+                <div class="cards-layout">
+                    <div class="card">
+                        <h3>Card 1</h3>
+                        <p>Contenido de la primera card con texto de ejemplo.</p>
+                        <button class="card-btn">Leer más</button>
+                    </div>
+                    <div class="card">
+                        <h3>Card 2</h3>
+                        <p>Contenido de la segunda card con más texto para demostrar el comportamiento.</p>
+                        <button class="card-btn">Leer más</button>
+                    </div>
+                    <div class="card">
+                        <h3>Card 3</h3>
+                        <p>Contenido de la tercera card.</p>
+                        <button class="card-btn">Leer más</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ejercicio 5: Header Completo -->
+            <section class="exercise">
+                <h2>5. Header Completo con Flexbox</h2>
+                <p>Crea un header que use diferentes tipos de distribución.</p>
+
+                <div class="header-demo">
+                    <header class="demo-header">
+                        <div class="logo">Logo</div>
+                        <nav class="nav-menu">
+                            <a href="#" class="nav-link">Inicio</a>
+                            <a href="#" class="nav-link">Servicios</a>
+                            <a href="#" class="nav-link">Productos</a>
+                            <a href="#" class="nav-link">Contacto</a>
+                        </nav>
+                        <div class="user-actions">
+                            <button class="btn-secondary">Iniciar Sesión</button>
+                            <button class="btn-primary">Registrarse</button>
+                        </div>
+                    </header>
+                </div>
+            </section>
+
+            <!-- Ejercicio Práctico -->
+            <section class="exercise">
+                <h2>🎯 Ejercicio Práctico</h2>
+                <p>Crea un dashboard con los siguientes elementos distribuidos usando flexbox:</p>
+                <ul>
+                    <li>Una barra lateral con navegación</li>
+                    <li>Un área de contenido principal</li>
+                    <li>Una barra superior con información del usuario</li>
+                    <li>Un área de widgets en la parte inferior</li>
+                </ul>
+
+                <div class="dashboard-demo">
+                    <div class="dashboard">
+                        <aside class="sidebar">
+                            <div class="sidebar-header">Dashboard</div>
+                            <nav class="sidebar-nav">
+                                <a href="#" class="sidebar-link">📊 Panel</a>
+                                <a href="#" class="sidebar-link">👥 Usuarios</a>
+                                <a href="#" class="sidebar-link">📈 Estadísticas</a>
+                                <a href="#" class="sidebar-link">⚙️ Configuración</a>
+                            </nav>
+                        </aside>
+
+                        <main class="main-content">
+                            <header class="top-bar">
+                                <h2>Panel de Control</h2>
+                                <div class="user-info">
+                                    <span>Bienvenido, Usuario</span>
+                                    <button class="logout-btn">Cerrar Sesión</button>
+                                </div>
+                            </header>
+
+                            <div class="content-area">
+                                <p>Contenido principal del dashboard...</p>
+                            </div>
+
+                            <div class="widgets-area">
+                                <div class="widget">Widget 1</div>
+                                <div class="widget">Widget 2</div>
+                                <div class="widget">Widget 3</div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Curso de HTML & CSS Básico - Ejercicio 4</p>
+        <a href="../index.html" class="btn-back">← Volver al índice</a>
+    </footer>
+</body>
+
+</html>

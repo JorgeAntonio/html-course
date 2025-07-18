@@ -1,0 +1,86 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.caja1 {
+  /* CONTENT (Contenido) */
+  width: 400px;
+  height: 200px;
+
+  /* PADDING (Relleno interno) */
+  padding: 20px;
+
+  /* BORDER (Borde) */
+  border: 2px solid black;
+
+  /* MARGIN (Margen externo) */
+  margin: 30px;
+
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Estilos para el texto dentro de la caja */
+.caja1 p {
+  margin: 0;
+  text-align: center;
+  line-height: 60px; /* Para centrar verticalmente el texto */
+}
+
+.caja2 {
+  /* CONTENT (Contenido) */
+  width: 400px;
+  height: 200px;
+
+  /* PADDING (Relleno interno) */
+  padding: 20px;
+
+  /* BORDER (Borde) */
+  border: 2px solid black;
+
+  /* MARGIN (Margen externo) */
+  margin: 30px;
+
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.caja2 p {
+  margin: 0;
+  text-align: center;
+  line-height: 60px; /* Para centrar verticalmente el texto */
+}
+
+.block {
+  display: block;
+}
+
+/* Ejemplos prácticos adicionales */
+.ejemplo-practico {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.ejemplo-practico h4 {
+  color: #495057;
+  margin-top: 0;
+}
+
+.ejemplo-bloque {
+  background-color: lightblue;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #007bff;
+}
+
+.ejemplo-inline {
+  background-color: lightcoral;
+  padding: 10px;
+  margin: 5px 5px;
+  border: 1px solid #dc3545;
+}
