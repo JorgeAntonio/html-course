@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1: Tipos de Posicionamiento CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>📍 Ejercicio 1: Tipos de Posicionamiento CSS</h1>
+        <p>Aprende los diferentes tipos de posicionamiento en CSS</p>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Ejercicio 1: Static -->
+            <section class="exercise">
+                <h2>1. Position: Static (por defecto)</h2>
+                <p>Los elementos con <code>position: static</code> siguen el flujo normal del documento.</p>
+
+                <div class="demo-area">
+                    <div class="box static-box">Caja 1</div>
+                    <div class="box static-box">Caja 2</div>
+                    <div class="box static-box">Caja 3</div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.static-box {
+    position: static;
+    /* top, right, bottom, left NO funcionan */
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio 2: Relative -->
+            <section class="exercise">
+                <h2>2. Position: Relative</h2>
+                <p>Los elementos se posicionan relativos a su posición normal.</p>
+
+                <div class="demo-area">
+                    <div class="box relative-box">Normal</div>
+                    <div class="box relative-box moved">Movido</div>
+                    <div class="box relative-box">Normal</div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.relative-box {
+    position: relative;
+}
+
+.moved {
+    top: 20px;
+    left: 30px;
+    background: #e74c3c;
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio 3: Absolute -->
+            <section class="exercise">
+                <h2>3. Position: Absolute</h2>
+                <p>Los elementos se posicionan relativos al ancestro posicionado más cercano.</p>
+
+                <div class="demo-area absolute-container">
+                    <div class="box absolute-box top-left">Top Left</div>
+                    <div class="box absolute-box top-right">Top Right</div>
+                    <div class="box absolute-box bottom-left">Bottom Left</div>
+                    <div class="box absolute-box bottom-right">Bottom Right</div>
+                    <div class="box absolute-box center">Center</div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.absolute-container {
+    position: relative;
+    height: 300px;
+}
+
+.absolute-box {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+}
+
+.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio 4: Fixed -->
+            <section class="exercise">
+                <h2>4. Position: Fixed</h2>
+                <p>Los elementos se mantienen fijos en la ventana del navegador.</p>
+
+                <div class="demo-area">
+                    <p>Haz scroll para ver el efecto del elemento fijo en la esquina inferior derecha.</p>
+                    <div class="box fixed-box">Fixed</div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.fixed-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio 5: Sticky -->
+            <section class="exercise">
+                <h2>5. Position: Sticky</h2>
+                <p>Los elementos se comportan como relative hasta alcanzar un punto específico.</p>
+
+                <div class="sticky-container">
+                    <div class="sticky-header">Header Sticky</div>
+                    <div class="content">
+                        <p>Contenido de ejemplo...</p>
+                        <p>Haz scroll para ver el efecto sticky.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        <p>Laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+                        <p>Velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Excepteur sint occaecat cupidatat non proident.</p>
+                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.sticky-header {
+    position: sticky;
+    top: 0;
+    background: #3498db;
+    color: white;
+    padding: 1rem;
+    z-index: 100;
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio Práctico -->
+            <section class="exercise">
+                <h2>🎯 Ejercicio Práctico</h2>
+                <p>Crea un layout con los siguientes elementos:</p>
+                <ul>
+                    <li>Un header fijo en la parte superior</li>
+                    <li>Una barra de navegación sticky debajo del header</li>
+                    <li>Un botón flotante fijo en la esquina inferior derecha</li>
+                    <li>Un elemento posicionado absolutamente en el centro de un contenedor</li>
+                </ul>
+
+                <div class="practice-area">
+                    <div class="practice-header">Header Fijo</div>
+                    <div class="practice-nav">Navegación Sticky</div>
+                    <div class="practice-content">
+                        <div class="practice-container">
+                            <div class="practice-centered">Centrado Absoluto</div>
+                        </div>
+                    </div>
+                    <div class="practice-button">Botón Fijo</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Curso de HTML & CSS Básico - Ejercicio 1</p>
+        <a href="../index.html" class="btn-back">← Volver al índice</a>
+    </footer>
+</body>
+
+</html>

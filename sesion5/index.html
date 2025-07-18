@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión 5: Posicionamiento CSS y Flexbox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header fijo -->
+    <header class="header-fixed">
+        <div class="container">
+            <h1>🎯 Sesión 5: Posicionamiento CSS y Flexbox</h1>
+            <p>Viernes 18 de julio de 2024</p>
+        </div>
+    </header>
+
+    <!-- Navegación sticky -->
+    <nav class="nav-sticky">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#posicionamiento">Posicionamiento</a></li>
+                <li><a href="#flexbox">Flexbox</a></li>
+                <li><a href="#ejemplos">Ejemplos</a></li>
+                <li><a href="#practica">Práctica</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Sección de Posicionamiento -->
+            <section id="posicionamiento" class="section">
+                <h2>📍 Tipos de Posicionamiento CSS</h2>
+
+                <div class="position-examples">
+                    <!-- Static -->
+                    <div class="position-demo">
+                        <h3>Position: Static (por defecto)</h3>
+                        <div class="demo-container">
+                            <div class="box static-box">Static</div>
+                            <div class="box static-box">Static</div>
+                            <div class="box static-box">Static</div>
+                        </div>
+                        <p>Los elementos siguen el flujo normal del documento.</p>
+                    </div>
+
+                    <!-- Relative -->
+                    <div class="position-demo">
+                        <h3>Position: Relative</h3>
+                        <div class="demo-container">
+                            <div class="box relative-box">Relative</div>
+                            <div class="box relative-box moved">Moved</div>
+                            <div class="box relative-box">Relative</div>
+                        </div>
+                        <p>El elemento se mueve desde su posición normal.</p>
+                    </div>
+
+                    <!-- Absolute -->
+                    <div class="position-demo">
+                        <h3>Position: Absolute</h3>
+                        <div class="demo-container absolute-container">
+                            <div class="box absolute-box top-left">Top Left</div>
+                            <div class="box absolute-box top-right">Top Right</div>
+                            <div class="box absolute-box bottom-left">Bottom Left</div>
+                            <div class="box absolute-box bottom-right">Bottom Right</div>
+                        </div>
+                        <p>Los elementos se posicionan relativos al contenedor padre.</p>
+                    </div>
+
+                    <!-- Fixed -->
+                    <div class="position-demo">
+                        <h3>Position: Fixed</h3>
+                        <div class="fixed-demo">
+                            <div class="box fixed-box">Fixed Box</div>
+                        </div>
+                        <p>El elemento se mantiene fijo en la ventana del navegador.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Flexbox -->
+            <section id="flexbox" class="section">
+                <h2>🎪 Flexbox - CSS Flexible Box Layout</h2>
+
+                <div class="flexbox-examples">
+                    <!-- Flex Direction -->
+                    <div class="flex-demo">
+                        <h3>Flex Direction</h3>
+                        <div class="flex-container row">
+                            <div class="flex-item">1</div>
+                            <div class="flex-item">2</div>
+                            <div class="flex-item">3</div>
+                        </div>
+                        <div class="flex-container column">
+                            <div class="flex-item">1</div>
+                            <div class="flex-item">2</div>
+                            <div class="flex-item">3</div>
+                        </div>
+                        <p>Controla la dirección del eje principal (row/column).</p>
+                    </div>
+
+                    <!-- Justify Content -->
+                    <div class="flex-demo">
+                        <h3>Justify Content</h3>
+                        <div class="flex-container justify-start">
+                            <div class="flex-item">Start</div>
+                            <div class="flex-item">Start</div>
+                        </div>
+                        <div class="flex-container justify-center">
+                            <div class="flex-item">Center</div>
+                            <div class="flex-item">Center</div>
+                        </div>
+                        <div class="flex-container justify-end">
+                            <div class="flex-item">End</div>
+                            <div class="flex-item">End</div>
+                        </div>
+                        <div class="flex-container justify-between">
+                            <div class="flex-item">Between</div>
+                            <div class="flex-item">Between</div>
+                        </div>
+                        <div class="flex-container justify-around">
+                            <div class="flex-item">Around</div>
+                            <div class="flex-item">Around</div>
+                        </div>
+                        <p>Alinea elementos en el eje principal.</p>
+                    </div>
+
+                    <!-- Align Items -->
+                    <div class="flex-demo">
+                        <h3>Align Items</h3>
+                        <div class="flex-container align-start">
+                            <div class="flex-item tall">Start</div>
+                            <div class="flex-item">Start</div>
+                        </div>
+                        <div class="flex-container align-center">
+                            <div class="flex-item tall">Center</div>
+                            <div class="flex-item">Center</div>
+                        </div>
+                        <div class="flex-container align-end">
+                            <div class="flex-item tall">End</div>
+                            <div class="flex-item">End</div>
+                        </div>
+                        <p>Alinea elementos en el eje transversal.</p>
+                    </div>
+
+                    <!-- Flex Grow/Shrink -->
+                    <div class="flex-demo">
+                        <h3>Flex Grow & Shrink</h3>
+                        <div class="flex-container">
+                            <div class="flex-item grow-1">Grow 1</div>
+                            <div class="flex-item grow-2">Grow 2</div>
+                            <div class="flex-item grow-3">Grow 3</div>
+                        </div>
+                        <p>Controla cómo los elementos crecen y se encogen.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Ejemplos Prácticos -->
+            <section id="ejemplos" class="section">
+                <h2>💡 Ejemplos Prácticos</h2>
+
+                <!-- Layout con Sidebar -->
+                <div class="layout-example">
+                    <h3>Layout con Sidebar usando Flexbox</h3>
+                    <div class="layout-container">
+                        <aside class="sidebar">
+                            <h4>Sidebar</h4>
+                            <ul>
+                                <li><a href="#">Inicio</a></li>
+                                <li><a href="#">Servicios</a></li>
+                                <li><a href="#">Productos</a></li>
+                                <li><a href="#">Contacto</a></li>
+                            </ul>
+                        </aside>
+                        <main class="content">
+                            <h4>Contenido Principal</h4>
+                            <p>Este es el contenido principal que se ajusta automáticamente al espacio disponible. El
+                                sidebar tiene un ancho fijo y el contenido toma el resto del espacio.</p>
+                            <p>Este layout se crea fácilmente usando flexbox con <code>display: flex</code> en el
+                                contenedor padre.</p>
+                        </main>
+                    </div>
+                </div>
+
+                <!-- Centrado Perfecto -->
+                <div class="layout-example">
+                    <h3>Centrado Perfecto con Flexbox</h3>
+                    <div class="center-container">
+                        <div class="centered-box">
+                            <h4>Centrado Perfecto</h4>
+                            <p>Este elemento está perfectamente centrado tanto horizontal como verticalmente usando
+                                flexbox.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards Responsive -->
+                <div class="layout-example">
+                    <h3>Cards Responsive con Flexbox</h3>
+                    <div class="cards-container">
+                        <div class="card">
+                            <h4>Card 1</h4>
+                            <p>Contenido de la primera card.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Card 2</h4>
+                            <p>Contenido de la segunda card.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Card 3</h4>
+                            <p>Contenido de la tercera card.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Práctica -->
+            <section id="practica" class="section">
+                <h2>🛠️ Ejercicios de Práctica</h2>
+
+                <div class="practice-links">
+                    <div class="practice-card">
+                        <h3>Ejercicio 1: Posicionamiento</h3>
+                        <p>Practica los diferentes tipos de posicionamiento CSS.</p>
+                        <a href="1/posicionamiento.html" class="btn">Ver Ejercicio</a>
+                    </div>
+
+                    <div class="practice-card">
+                        <h3>Ejercicio 2: Coordenadas</h3>
+                        <p>Aprende a usar top, left, right, bottom.</p>
+                        <a href="2/coordenadas.html" class="btn">Ver Ejercicio</a>
+                    </div>
+
+                    <div class="practice-card">
+                        <h3>Ejercicio 3: Flexbox Básico</h3>
+                        <p>Primeros pasos con flexbox.</p>
+                        <a href="3/flexbox-basico.html" class="btn">Ver Ejercicio</a>
+                    </div>
+
+                    <div class="practice-card">
+                        <h3>Ejercicio 4: Distribución</h3>
+                        <p>Practica justify-content y align-items.</p>
+                        <a href="4/distribucion.html" class="btn">Ver Ejercicio</a>
+                    </div>
+
+                    <div class="practice-card">
+                        <h3>Ejercicio 5: Layout Completo</h3>
+                        <p>Crea un layout completo con sidebar.</p>
+                        <a href="5/layout-completo.html" class="btn">Ver Ejercicio</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer fijo -->
+    <footer class="footer-fixed">
+        <div class="container">
+            <p>&copy; 2024 Curso de HTML & CSS Básico - Sesión 5</p>
+            <p>Instructor: Jorge Antonio Del Águila Malafaya</p>
+        </div>
+    </footer>
+</body>
+
+</html>

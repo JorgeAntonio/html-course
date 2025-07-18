@@ -1,0 +1,397 @@
+/* Reset y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #7f8c8d;
+  font-size: 1.2rem;
+}
+
+/* Main content */
+.main {
+  padding: 2rem 0;
+}
+
+/* Ejercicios */
+.exercise {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.exercise h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 0.5rem;
+}
+
+.exercise p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.exercise code {
+  background: #f0f0f0;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  color: #e74c3c;
+}
+
+/* Áreas de demostración */
+.demo-area {
+  border: 3px dashed #667eea;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  min-height: 200px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Cajas de ejemplo */
+.box {
+  width: 100px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+/* Posicionamiento específico */
+.static-box {
+  position: static;
+}
+
+.relative-box {
+  position: relative;
+}
+
+.relative-box.moved {
+  top: 20px;
+  left: 30px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.absolute-container {
+  position: relative;
+  height: 300px;
+}
+
+.absolute-box {
+  position: absolute;
+  width: 120px;
+  height: 80px;
+  font-size: 0.9rem;
+}
+
+.top-left {
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.top-right {
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+.bottom-left {
+  bottom: 20px;
+  left: 20px;
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.bottom-right {
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.fixed-box {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  z-index: 1000;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 5px 20px rgba(231, 76, 60, 0.4);
+}
+
+/* Sticky example */
+.sticky-container {
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  z-index: 100;
+}
+
+.content {
+  background: white;
+  padding: 2rem;
+  min-height: 500px;
+}
+
+.content p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Ejemplos de código */
+.code-example {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+}
+
+.code-example h3 {
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+
+.code-example pre {
+  background: #34495e;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.code-example code {
+  background: none;
+  color: #ecf0f1;
+  padding: 0;
+}
+
+/* Ejercicio práctico */
+.practice-area {
+  border: 3px solid #27ae60;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  min-height: 400px;
+  position: relative;
+}
+
+.practice-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1001;
+}
+
+.practice-nav {
+  position: sticky;
+  top: 60px;
+  background: linear-gradient(135deg, #34495e, #2c3e50);
+  color: white;
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.practice-content {
+  padding: 80px 2rem 2rem 2rem;
+  background: #f8f9fa;
+  min-height: 300px;
+}
+
+.practice-container {
+  position: relative;
+  height: 200px;
+  border: 2px dashed #27ae60;
+  border-radius: 10px;
+  background: white;
+}
+
+.practice-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.practice-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 5px 20px rgba(231, 76, 60, 0.4);
+  z-index: 1002;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.practice-button:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+  background: rgba(44, 62, 80, 0.95);
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.btn-back {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .exercise {
+    padding: 1.5rem;
+  }
+
+  .demo-area {
+    padding: 1rem;
+  }
+
+  .box {
+    width: 80px;
+    height: 60px;
+    font-size: 0.8rem;
+  }
+
+  .absolute-box {
+    width: 100px;
+    height: 60px;
+    font-size: 0.7rem;
+  }
+
+  .practice-content {
+    padding: 60px 1rem 1rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .exercise h2 {
+    font-size: 1.5rem;
+  }
+
+  .box {
+    width: 70px;
+    height: 50px;
+    font-size: 0.7rem;
+    margin: 5px;
+  }
+
+  .absolute-box {
+    width: 80px;
+    height: 50px;
+    font-size: 0.6rem;
+  }
+}

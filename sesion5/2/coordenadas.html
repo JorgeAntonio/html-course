@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2: Coordenadas CSS - top, left, right, bottom</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>🎯 Ejercicio 2: Coordenadas CSS</h1>
+        <p>Aprende a usar top, left, right, bottom con diferentes tipos de posicionamiento</p>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Introducción -->
+            <section class="intro">
+                <h2>📐 Propiedades de Coordenadas</h2>
+                <p>Las propiedades <code>top</code>, <code>left</code>, <code>right</code> y <code>bottom</code> se usan
+                    para posicionar elementos cuando tienen <code>position</code> diferente a <code>static</code>.</p>
+
+                <div class="coordinate-grid">
+                    <div class="coordinate-item">
+                        <h3>top</h3>
+                        <p>Distancia desde el borde superior</p>
+                    </div>
+                    <div class="coordinate-item">
+                        <h3>right</h3>
+                        <p>Distancia desde el borde derecho</p>
+                    </div>
+                    <div class="coordinate-item">
+                        <h3>bottom</h3>
+                        <p>Distancia desde el borde inferior</p>
+                    </div>
+                    <div class="coordinate-item">
+                        <h3>left</h3>
+                        <p>Distancia desde el borde izquierdo</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ejercicio 1: Relative con coordenadas -->
+            <section class="exercise">
+                <h2>1. Position: Relative + Coordenadas</h2>
+                <p>Mueve elementos desde su posición normal usando coordenadas.</p>
+
+                <div class="demo-area">
+                    <div class="box relative-box">Original</div>
+                    <div class="box relative-box top-20">top: 20px</div>
+                    <div class="box relative-box left-30">left: 30px</div>
+                    <div class="box relative-box top-20-left-30">top: 20px, left: 30px</div>
+                    <div class="box relative-box bottom-20-right-30">bottom: 20px, right: 30px</div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.top-20 {
+    position: relative;
+    top: 20px;
+}
+
+.left-30 {
+    position: relative;
+    left: 30px;
+}
+
+.top-20-left-30 {
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+.bottom-20-right-30 {
+    position: relative;
+    bottom: 20px;
+    right: 30px;
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio 2: Absolute con coordenadas -->
+            <section class="exercise">
+                <h2>2. Position: Absolute + Coordenadas</h2>
+                <p>Posiciona elementos en puntos específicos del contenedor padre.</p>
+
+                <div class="demo-area absolute-demo">
+                    <div class="box absolute-box corner top-left">top: 0, left: 0</div>
+                    <div class="box absolute-box corner top-right">top: 0, right: 0</div>
+                    <div class="box absolute-box corner bottom-left">bottom: 0, left: 0</div>
+                    <div class="box absolute-box corner bottom-right">bottom: 0, right: 0</div>
+                    <div class="box absolute-box center">Centro</div>
+                    <div class="box absolute-box middle-left">Centro Izquierda</div>
+                    <div class="box absolute-box middle-right">Centro Derecha</div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.absolute-demo {
+    position: relative;
+    height: 300px;
+}
+
+.corner {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio 3: Fixed con coordenadas -->
+            <section class="exercise">
+                <h2>3. Position: Fixed + Coordenadas</h2>
+                <p>Posiciona elementos fijos en la ventana del navegador.</p>
+
+                <div class="demo-area">
+                    <p>Haz scroll para ver los elementos fijos en diferentes posiciones:</p>
+                    <ul>
+                        <li>Esquina superior izquierda</li>
+                        <li>Esquina superior derecha</li>
+                        <li>Centro de la pantalla</li>
+                        <li>Esquina inferior izquierda</li>
+                        <li>Esquina inferior derecha</li>
+                    </ul>
+                </div>
+
+                <!-- Elementos fijos -->
+                <div class="fixed-element top-left-fixed">Top Left</div>
+                <div class="fixed-element top-right-fixed">Top Right</div>
+                <div class="fixed-element center-fixed">Center</div>
+                <div class="fixed-element bottom-left-fixed">Bottom Left</div>
+                <div class="fixed-element bottom-right-fixed">Bottom Right</div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.fixed-element {
+    position: fixed;
+    width: 80px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.top-left-fixed {
+    top: 20px;
+    left: 20px;
+}
+
+.top-right-fixed {
+    top: 20px;
+    right: 20px;
+}
+
+.center-fixed {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom-left-fixed {
+    bottom: 20px;
+    left: 20px;
+}
+
+.bottom-right-fixed {
+    bottom: 20px;
+    right: 20px;
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio 4: Centrado con diferentes métodos -->
+            <section class="exercise">
+                <h2>4. Centrado con Coordenadas</h2>
+                <p>Diferentes formas de centrar elementos usando coordenadas.</p>
+
+                <div class="centering-demo">
+                    <div class="centering-method">
+                        <h3>Método 1: top + left + transform</h3>
+                        <div class="demo-container">
+                            <div class="centered-box method1">Centrado</div>
+                        </div>
+                    </div>
+
+                    <div class="centering-method">
+                        <h3>Método 2: top + left + margin</h3>
+                        <div class="demo-container">
+                            <div class="centered-box method2">Centrado</div>
+                        </div>
+                    </div>
+
+                    <div class="centering-method">
+                        <h3>Método 3: top + right + bottom + left</h3>
+                        <div class="demo-container">
+                            <div class="centered-box method3">Centrado</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>/* Método 1: transform */
+.method1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Método 2: margin negativo */
+.method2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -50px;
+}
+
+/* Método 3: todos los lados */
+.method3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio 5: Layout con coordenadas -->
+            <section class="exercise">
+                <h2>5. Layout Completo con Coordenadas</h2>
+                <p>Crea un layout usando diferentes tipos de posicionamiento y coordenadas.</p>
+
+                <div class="layout-demo">
+                    <header class="layout-header">Header Fijo</header>
+                    <nav class="layout-nav">Navegación</nav>
+                    <aside class="layout-sidebar">Sidebar</aside>
+                    <main class="layout-main">Contenido Principal</main>
+                    <footer class="layout-footer">Footer</footer>
+                    <div class="layout-button">Botón Flotante</div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Código CSS:</h3>
+                    <pre><code>.layout-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+}
+
+.layout-nav {
+    position: sticky;
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: 40px;
+}
+
+.layout-sidebar {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    bottom: 60px;
+    width: 200px;
+}
+
+.layout-main {
+    position: relative;
+    top: 100px;
+    left: 200px;
+    right: 0;
+    bottom: 60px;
+}
+
+.layout-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+}
+
+.layout-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Ejercicio Práctico -->
+            <section class="exercise">
+                <h2>🎯 Ejercicio Práctico</h2>
+                <p>Crea una tarjeta de perfil con los siguientes elementos:</p>
+                <ul>
+                    <li>Una imagen de avatar posicionada absolutamente en la esquina superior izquierda</li>
+                    <li>Un badge de estado "Online" posicionado absolutamente en la esquina superior derecha</li>
+                    <li>Un botón "Seguir" posicionado absolutamente en la esquina inferior derecha</li>
+                    <li>Información del usuario centrada en la tarjeta</li>
+                </ul>
+
+                <div class="profile-card">
+                    <img src="https://via.placeholder.com/60x60/3498db/ffffff?text=AV" alt="Avatar"
+                        class="profile-avatar">
+                    <div class="status-badge">Online</div>
+                    <div class="profile-info">
+                        <h3>Juan Pérez</h3>
+                        <p>Desarrollador Web</p>
+                        <p>@juanperez</p>
+                    </div>
+                    <button class="follow-button">Seguir</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Curso de HTML & CSS Básico - Ejercicio 2</p>
+        <a href="../index.html" class="btn-back">← Volver al índice</a>
+    </footer>
+</body>
+
+</html>

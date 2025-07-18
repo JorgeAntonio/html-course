@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5: Layout Completo con Flexbox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>🏗️ Ejercicio 5: Layout Completo con Flexbox</h1>
+        <p>Crea un layout completo con sidebar + contenido principal usando flexbox</p>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Introducción -->
+            <section class="intro">
+                <h2>🎯 Layout Completo con Flexbox</h2>
+                <p>En este ejercicio crearás un layout completo de página web usando flexbox. Aprenderás a estructurar
+                    una página con header, sidebar, contenido principal y footer.</p>
+            </section>
+
+            <!-- Layout Básico -->
+            <section class="exercise">
+                <h2>1. Layout Básico con Sidebar</h2>
+                <p>Un layout simple con sidebar lateral y contenido principal.</p>
+
+                <div class="layout-demo">
+                    <div class="basic-layout">
+                        <aside class="sidebar">
+                            <h3>Sidebar</h3>
+                            <nav class="sidebar-nav">
+                                <a href="#" class="sidebar-link">Inicio</a>
+                                <a href="#" class="sidebar-link">Servicios</a>
+                                <a href="#" class="sidebar-link">Productos</a>
+                                <a href="#" class="sidebar-link">Contacto</a>
+                            </nav>
+                        </aside>
+                        <main class="content">
+                            <h2>Contenido Principal</h2>
+                            <p>Este es el contenido principal que se ajusta automáticamente al espacio disponible. El
+                                sidebar tiene un ancho fijo y el contenido toma el resto del espacio.</p>
+                            <p>Este layout se crea fácilmente usando flexbox con <code>display: flex</code> en el
+                                contenedor padre.</p>
+                        </main>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Layout Completo -->
+            <section class="exercise">
+                <h2>2. Layout Completo de Página</h2>
+                <p>Un layout completo con header, sidebar, contenido principal y footer.</p>
+
+                <div class="layout-demo">
+                    <div class="full-layout">
+                        <header class="page-header">
+                            <div class="header-content">
+                                <h1>Mi Sitio Web</h1>
+                                <nav class="header-nav">
+                                    <a href="#" class="header-link">Inicio</a>
+                                    <a href="#" class="header-link">Acerca</a>
+                                    <a href="#" class="header-link">Contacto</a>
+                                </nav>
+                            </div>
+                        </header>
+
+                        <div class="main-container">
+                            <aside class="page-sidebar">
+                                <h3>Navegación</h3>
+                                <nav class="sidebar-nav">
+                                    <a href="#" class="sidebar-link">📊 Dashboard</a>
+                                    <a href="#" class="sidebar-link">👥 Usuarios</a>
+                                    <a href="#" class="sidebar-link">📈 Reportes</a>
+                                    <a href="#" class="sidebar-link">⚙️ Configuración</a>
+                                </nav>
+                            </aside>
+
+                            <main class="page-content">
+                                <section class="content-section">
+                                    <h2>Bienvenido al Dashboard</h2>
+                                    <p>Este es un ejemplo de layout completo usando flexbox. El header se mantiene fijo
+                                        en la parte superior, el sidebar lateral tiene un ancho fijo, y el contenido
+                                        principal se ajusta al espacio restante.</p>
+
+                                    <div class="cards-grid">
+                                        <div class="content-card">
+                                            <h3>Card 1</h3>
+                                            <p>Contenido de la primera card.</p>
+                                        </div>
+                                        <div class="content-card">
+                                            <h3>Card 2</h3>
+                                            <p>Contenido de la segunda card.</p>
+                                        </div>
+                                        <div class="content-card">
+                                            <h3>Card 3</h3>
+                                            <p>Contenido de la tercera card.</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </main>
+                        </div>
+
+                        <footer class="page-footer">
+                            <div class="footer-content">
+                                <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+                                <div class="footer-links">
+                                    <a href="#">Política de Privacidad</a>
+                                    <a href="#">Términos de Servicio</a>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Layout Responsive -->
+            <section class="exercise">
+                <h2>3. Layout Responsive</h2>
+                <p>Un layout que se adapta a diferentes tamaños de pantalla.</p>
+
+                <div class="layout-demo">
+                    <div class="responsive-layout">
+                        <header class="responsive-header">
+                            <div class="header-content">
+                                <h1>Layout Responsive</h1>
+                                <button class="menu-toggle">☰</button>
+                            </div>
+                        </header>
+
+                        <div class="responsive-container">
+                            <aside class="responsive-sidebar">
+                                <h3>Menú</h3>
+                                <nav class="sidebar-nav">
+                                    <a href="#" class="sidebar-link">Inicio</a>
+                                    <a href="#" class="sidebar-link">Servicios</a>
+                                    <a href="#" class="sidebar-link">Productos</a>
+                                    <a href="#" class="sidebar-link">Contacto</a>
+                                </nav>
+                            </aside>
+
+                            <main class="responsive-content">
+                                <h2>Contenido Responsive</h2>
+                                <p>Este layout se adapta automáticamente a diferentes tamaños de pantalla. En pantallas
+                                    grandes, el sidebar está visible. En pantallas pequeñas, se oculta y se puede
+                                    mostrar con un botón.</p>
+
+                                <div class="responsive-cards">
+                                    <div class="responsive-card">
+                                        <h3>Card 1</h3>
+                                        <p>Esta card se adapta al tamaño de la pantalla.</p>
+                                    </div>
+                                    <div class="responsive-card">
+                                        <h3>Card 2</h3>
+                                        <p>En pantallas grandes se muestran en fila, en pequeñas se apilan.</p>
+                                    </div>
+                                </div>
+                            </main>
+                        </div>
+
+                        <footer class="responsive-footer">
+                            <p>Footer responsive</p>
+                        </footer>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ejercicio Práctico -->
+            <section class="exercise">
+                <h2>🎯 Ejercicio Práctico</h2>
+                <p>Crea una página web completa con los siguientes elementos:</p>
+                <ul>
+                    <li>Header fijo con navegación</li>
+                    <li>Sidebar lateral con menú</li>
+                    <li>Contenido principal con artículos</li>
+                    <li>Footer con información de contacto</li>
+                    <li>Diseño responsive que funcione en móviles</li>
+                </ul>
+
+                <div class="practice-layout">
+                    <div class="website-layout">
+                        <header class="website-header">
+                            <div class="header-container">
+                                <div class="logo">MiBlog</div>
+                                <nav class="website-nav">
+                                    <a href="#" class="nav-link">Inicio</a>
+                                    <a href="#" class="nav-link">Blog</a>
+                                    <a href="#" class="nav-link">Acerca</a>
+                                    <a href="#" class="nav-link">Contacto</a>
+                                </nav>
+                            </div>
+                        </header>
+
+                        <div class="website-container">
+                            <aside class="website-sidebar">
+                                <div class="sidebar-widget">
+                                    <h3>Categorías</h3>
+                                    <ul class="category-list">
+                                        <li><a href="#">Tecnología</a></li>
+                                        <li><a href="#">Diseño</a></li>
+                                        <li><a href="#">Desarrollo</a></li>
+                                        <li><a href="#">Marketing</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="sidebar-widget">
+                                    <h3>Artículos Populares</h3>
+                                    <ul class="popular-list">
+                                        <li><a href="#">Cómo aprender CSS</a></li>
+                                        <li><a href="#">Flexbox vs Grid</a></li>
+                                        <li><a href="#">Diseño responsive</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+
+                            <main class="website-content">
+                                <article class="blog-post">
+                                    <h2>Creando Layouts con Flexbox</h2>
+                                    <p class="post-meta">Publicado el 18 de julio de 2024</p>
+                                    <p>Flexbox es una herramienta poderosa para crear layouts modernos y responsive. En
+                                        este artículo aprenderemos cómo crear layouts complejos usando CSS Flexbox.</p>
+                                    <p>Con flexbox podemos crear layouts que se adaptan automáticamente a diferentes
+                                        tamaños de pantalla, distribuir elementos de manera uniforme y centrar contenido
+                                        fácilmente.</p>
+                                </article>
+
+                                <article class="blog-post">
+                                    <h2>Mejores Prácticas de CSS</h2>
+                                    <p class="post-meta">Publicado el 17 de julio de 2024</p>
+                                    <p>Las mejores prácticas de CSS nos ayudan a escribir código más mantenible y
+                                        escalable. Aquí te compartimos algunos consejos importantes.</p>
+                                </article>
+                            </main>
+                        </div>
+
+                        <footer class="website-footer">
+                            <div class="footer-container">
+                                <div class="footer-section">
+                                    <h3>MiBlog</h3>
+                                    <p>Un blog sobre desarrollo web y diseño.</p>
+                                </div>
+                                <div class="footer-section">
+                                    <h3>Contacto</h3>
+                                    <p>Email: info@miblog.com</p>
+                                    <p>Teléfono: (123) 456-7890</p>
+                                </div>
+                                <div class="footer-section">
+                                    <h3>Síguenos</h3>
+                                    <div class="social-links">
+                                        <a href="#" class="social-link">Twitter</a>
+                                        <a href="#" class="social-link">Facebook</a>
+                                        <a href="#" class="social-link">Instagram</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Curso de HTML & CSS Básico - Ejercicio 5</p>
+        <a href="../index.html" class="btn-back">← Volver al índice</a>
+    </footer>
+</body>
+
+</html>
