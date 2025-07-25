@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
@@ -23,7 +25,7 @@
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="projects.html">Proyectos</a></li>
                     <li><a href="contact.html">Contacto</a></li>
-                    <li><button class="btn-secondary">Descargar CV</button></li>
+                    <li><a href="#" class="btn-secondary">Descargar CV</a></li>
                 </ul>
             </div>
             <div class="mobile-menu">
@@ -35,7 +37,7 @@
     <!-- MAIN -->
     <main class="container">
         <!-- HERO -->
-        <section class="hero">
+        <section id="hero" class="hero">
             <div class="hero-content">
                 <div class="hero-content-text">
                     <p>Hola, soy</p>
@@ -46,8 +48,8 @@
                         JavaScript.</span>
                 </div>
                 <div class="hero-content-button">
-                    <button class="btn-primary">Contactame</button>
-                    <button class="btn-secondary">Proyectos</button>
+                    <a href="#contact" class="btn-primary">Contactame</a>
+                    <a href="#projects" class="btn-secondary">Proyectos</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -56,7 +58,7 @@
         </section>
 
         <!-- ABOUT -->
-        <section class="about">
+        <section id="about" class="about">
             <h2 class="text-title">Sobre mí</h2>
             <div class="about-content">
                 <div class="about-skills">
@@ -111,7 +113,7 @@
 
         </section>
         <!-- PROJECTS -->
-        <section class="projects">
+        <section id="projects" class="projects">
             <h2 class="text-title">Proyectos</h2>
             <div class="projects-grid">
                 <div class="project-card">
@@ -156,11 +158,92 @@
                 </div>
             </div>
         </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+            <h2 class="text-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¡Trabajemos juntos!</h3>
+                    <p class="text-description">¿Tienes un proyecto en mente? Me encantaría escuchar sobre él. Estoy
+                        siempre abierto a nuevas oportunidades y colaboraciones.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>jorge.antonio@email.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h4>WhatsApp</h4>
+                                <p>+52 123 456 7890</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-details">
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/jorge-antonio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- FOOTER -->
     <footer>
-        <p>Derechos reservados &copy; 2025 Jorge Antonio</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-logo">JA</h3>
+                <p class="text-description">Desarrollador web apasionado por crear experiencias digitales únicas.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociales</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Jorge Antonio. Todos los derechos reservados.</p>
+        </div>
     </footer>
 </body>
 
