@@ -42,6 +42,13 @@
   cursor: pointer;
   font-weight: 400;
   font-size: 16px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+  border-color: #333;
 }
 
 .btn-secondary {
@@ -56,10 +63,12 @@
   font-weight: 400;
   cursor: pointer;
   font-size: 16px;
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .btn-secondary:hover {
-  background-color: #fff;
+  background-color: #f0f0f0;
   color: #000;
   border: 1px solid #000;
 }
